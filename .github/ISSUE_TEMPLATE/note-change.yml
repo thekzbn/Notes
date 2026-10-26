@@ -1,0 +1,53 @@
+name: Notes change
+description: Propose an addition or improvement to a MOD or SS document.
+title: "[Notes] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contributions are accepted for MOD and SS documents only. OD documents are not open for contributions. Create this issue before opening a pull request.
+
+  - type: input
+    id: course
+    attributes:
+      label: Course code
+      description: Which course is this about?
+      placeholder: SEN211
+    validations:
+      required: true
+
+  - type: dropdown
+    id: document_type
+    attributes:
+      label: Document type
+      description: Which type of note does this change concern?
+      options:
+        - MOD
+        - SS
+    validations:
+      required: true
+
+  - type: input
+    id: filename
+    attributes:
+      label: Filename
+      description: If this concerns an existing document, provide its filename.
+      placeholder: SEN211-26-10-2026-MOD.md
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What would you like to add or improve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Add links or sources if they help explain the proposal.
+    validations:
+      required: false
